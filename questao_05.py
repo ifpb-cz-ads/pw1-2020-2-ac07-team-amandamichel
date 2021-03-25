@@ -8,6 +8,9 @@ class Televisão:
         self.canal = 2
         self.cmin = min
         self.cmax = max
+    
+    def __repr__(self):
+        return f'Nome: {self.nome} | Canal min: {self.cmin} | Canal max: {self.cmax} | Canal atual: {self.canal} \n'
 
     def muda_canal_para_baixo(self):
         if (self.canal - 1 >= self.cmin):
@@ -20,6 +23,6 @@ class Televisão:
 tv1 = Televisão('TV 1', 2, 4)
 tv2 = Televisão('TV 2', 4, 20)
 
-print(f'Nome: {tv1.nome} | Canal min: {tv1.cmin} | Canal max: {tv1.cmax} | Canal atual: {tv1.canal} \n')
+print(tv1)
 
-print(f'Nome: {tv2.nome} | Canal min: {tv2.cmin} | Canal max: {tv2.cmax} | Canal atual: {tv2.canal} \n')
+print(tv2)
